@@ -1,0 +1,17 @@
+server:
+  port: 9998
+spring:
+#  application:
+#    name: consumer
+  kafka:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-serializer: org.apache.kafka.common.serialization.StringDeserializer
+      consumer:
+        group-id: test-group
+        batch-size: 3
+
+kafka:
+  topic:
+    name: test-topic-name
+
